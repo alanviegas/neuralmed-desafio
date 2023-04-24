@@ -61,7 +61,7 @@
     - bildar e instalar aplicação 
     - baixar e instalar os containers (apache-spark e google-sdk)
 
-4. Execução manuais e testes dos jobs Spark
+4. Execuções manuais e testes dos jobs Spark
 - Para entrar na console pyspark
     - docker-compose run apache-spark-py /opt/spark/bin/pyspark
 - Para rodar as ingestões pelo spark-submit
@@ -69,7 +69,7 @@
     - docker-compose run apache-spark-py /opt/spark/bin/spark-submit /src/pyspark/start.py Label
     - docker-compose run apache-spark-py /opt/spark/bin/spark-submit /src/pyspark/start.py Medical_Report
 
-5. Para rodar os SQLs no Bigquery
+5. Execuções manuais e testes dos SQLs no BigQuery
 - docker-compose run google-cloud-sdk /src/bigquery/exec_bq.sh raw_tables.sql
 - docker-compose run google-cloud-sdk /src/bigquery/exec_bq.sh completude.sql
 - docker-compose run google-cloud-sdk /src/bigquery/exec_bq.sh score.sql
