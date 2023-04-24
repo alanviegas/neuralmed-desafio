@@ -82,5 +82,5 @@
 ![solucao_final](./docs/solucao_final.png)
 
 ### Links de referencia
-https://hub.docker.com/r/apache/spark-py
-https://hub.docker.com/r/google/cloud-sdk/
+- https://hub.docker.com/r/apache/spark-py
+- https://hub.docker.com/r/google/cloud-sdk/
