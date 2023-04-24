@@ -69,17 +69,17 @@
 
 ### Print das Tabelas (evidências)
 
-![Exam](./docs/Exam.jpg)
+![Exam](./docs/Exam.png)
 
-![Label](./docs/Label.jpg)
+![Label](./docs/Label.png)
 
-![Medical_Report](./docs/Medical_Report.jpg)
+![Medical_Report](./docs/Medical_Report.png)
 
-![completude](./docs/completude.jpg)
+![completude](./docs/completude.png)
 
-![score](./docs/score.jpg)
+![score](./docs/score.png)
 
-![solucao_final](./docs/solucao_final.jpg)
+![solucao_final](./docs/solucao_final.png)
 
 ### Links de referencia
 https://hub.docker.com/r/apache/spark-py
