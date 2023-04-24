@@ -43,15 +43,19 @@
 
 
 ### Ambiente de testes e desenvolvimento
-1. Configure no docker-compose.yaml as variaveis
+
+1. Crie uma conta no GCP 
+- Criar uma Service Account e gerar uma credencial json
+- Criar um bucket
+- Com os datasets no BigQuery
+    - neuralmed_raw
+    - neuralmed_prep
+
+2. Configure no docker-compose.yaml as variaveis
     - GOOGLE_APPLICATION_CREDENTIALS
     - GCP_PROJECT_ID
     - CONFIG_SCHEMAS_FILE
     - RAW_BUCKET
-
-2. Crie os datasets no BigQuery
-    - neuralmed_raw
-    - neuralmed_prep
 
 3. Execute o setup.sh para:
     - bildar e instalar aplicação 
