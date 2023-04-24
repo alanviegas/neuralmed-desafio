@@ -11,10 +11,10 @@
     - /src/bigquery/exec_bq.sh  #  script para executar as SQLs
 
 ### GCP
-- Service Account utilizada: 
+- Service Account: 
     - neuralmed-sa@centering-river-248712.iam.gserviceaccount.com
     
-    Roles Configuradas:
+    Com as devidas roles configuradas:
     - BigQuery Data Editor
     - BigQuery Job User
     - Storage Object Creator
@@ -42,17 +42,22 @@
 ![desenho](./docs/neuralmed-desafio.jpg)
 
 
-### Instalação e Configuração do ambiente de testes e desenvolvimento
+### Ambiente de testes e desenvolvimento
 1. Configure no docker-compose.yaml as variaveis
     - GOOGLE_APPLICATION_CREDENTIALS
     - GCP_PROJECT_ID
     - CONFIG_SCHEMAS_FILE
+    - RAW_BUCKET
 
-2. Execute o setup.sh para:
+2. Crie os datasets no BigQuery
+    - neuralmed_raw
+    - neuralmed_prep
+
+3. Execute o setup.sh para:
     - bildar e instalar aplicação 
     - baixar e instalar os containers (apache-spark e google-sdk)
 
-3. Execução manuais e testes dos jobs Spark
+4. Execução manuais e testes dos jobs Spark
 - Para entrar na console pyspark
     - docker-compose run apache-spark-py /opt/spark/bin/pyspark
 - Para rodar as ingestões pelo spark-submit
@@ -60,14 +65,14 @@
     - docker-compose run apache-spark-py /opt/spark/bin/spark-submit /src/pyspark/start.py Label
     - docker-compose run apache-spark-py /opt/spark/bin/spark-submit /src/pyspark/start.py Medical_Report
 
-4. Para rodar os SQLs no Bigquery
+5. Para rodar os SQLs no Bigquery
 - docker-compose run google-cloud-sdk /src/bigquery/exec_bq.sh raw_tables.sql
 - docker-compose run google-cloud-sdk /src/bigquery/exec_bq.sh completude.sql
 - docker-compose run google-cloud-sdk /src/bigquery/exec_bq.sh score.sql
 - docker-compose run google-cloud-sdk /src/bigquery/exec_bq.sh solucao_final.sql
 
 
-### Print das Tabelas (evidências)
+### Print(evidências) das Tabelas
 
 ![Exam](./docs/Exam.png)
 
