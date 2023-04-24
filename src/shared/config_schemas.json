@@ -1,0 +1,100 @@
+{
+    "Exam": {
+        "columns": {
+            "content.id": [
+                "id",
+                "string"
+            ],
+            "content.source": [
+                "source",
+                "string"
+            ],
+            "content.dataset_type": [
+                "dataset_type",
+                "string"
+            ],
+            "content.dataset": [
+                "dataset",
+                "string"
+            ],
+            "content.body_part": [
+                "body_part",
+                "string"
+            ],
+            "content.image_path": [
+                "image_path",
+                "string"
+            ],
+            "publication_timestamp": [
+                "publication_timestamp",
+                "datetime"
+            ]
+        },
+        "primary_keys_list": [
+            "id"
+        ],
+        "path_files": "./data/exam/*"
+    },
+    "Label": {
+        "columns": {
+            "content.id": [
+                "id",
+                "string"
+            ],
+            "content.labels.classification": [
+                "classification",
+                "string"
+            ],
+            "content.labels.classification_type": [
+                "classification_type",
+                "string"
+            ],
+            "content.labels.labelled_by": [
+                "labelled_by",
+                "string"
+            ],
+            "content.labels.labelled_date": [
+                "labelled_date",
+                "date"
+            ],
+            "content.labels.labelling_method": [
+                "labelling_method",
+                "string"
+            ],
+            "content.labels.value": [
+                "value",
+                "boolean"
+            ]
+        },
+        "primary_keys_list": [
+            "exame_id",
+            "classification"
+        ],
+        "path_files": "./data/exam/*"
+    },
+    "Medical_Report": {
+        "columns": {
+            "content.exam_id": [
+                "exam_id",
+                "string"
+            ],
+            "content.report_date": [
+                "report_date",
+                "date"
+            ],
+            "content.reported_by": [
+                "reported_by",
+                "string"
+            ],
+            "content.text": [
+                "text",
+                "string"
+            ]
+        },
+        "primary_keys_list": [
+            "exame_id",
+            "report_date"
+        ],
+        "path_files": "./data/medical_report/*"
+    }
+}

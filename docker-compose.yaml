@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  apache-spark-py:
+    build: .
+    environment:
+      GOOGLE_APPLICATION_CREDENTIALS: /src/shared/credentials.json
+      GCP_PROJECT_ID: 'centering-river-248712'
+      CONFIG_SCHEMAS_FILE: /src/shared/config_schemas.json
+      RAW_BUCKET: 'neuralmed-tst'
+    volumes:
+      - ./data:/data
+      - ./src:/src
+      - ./dist:/dist
+
+  google-cloud-sdk:
+    image: google/cloud-sdk:latest
+    environment:
+      GOOGLE_APPLICATION_CREDENTIALS: /src/shared/credentials.json
+      GCP_PROJECT_ID: 'centering-river-248712'
+    volumes:
+      - ./src:/src
+      - ./dist:/dist
