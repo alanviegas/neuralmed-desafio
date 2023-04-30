@@ -6,6 +6,7 @@ from pyspark.sql import SparkSession
 
 if __name__ == "__main__":
 
+    # espera receber o nome da tabela a ser processada como parametro
     if len(sys.argv) != 2:
         print("Argumento necessario: <table_name>")
         print(sys.argv)
