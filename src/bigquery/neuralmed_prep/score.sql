@@ -1,5 +1,6 @@
 CREATE OR REPLACE TABLE `neuralmed_prep.score`
 AS
+-- tabela com o cálculo de score
 SELECT 
   id, 
   classification as label, 
