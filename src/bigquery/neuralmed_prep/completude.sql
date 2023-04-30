@@ -6,6 +6,7 @@ SELECT DISTINCT
   classification
 FROM `neuralmed_raw.Label`
 )
+-- cria tabela com o calculo de completude
 SELECT id,
   ARRAY_AGG(STRUCT(classification)) as labels,
   CASE ARRAY_LENGTH(ARRAY_AGG(DISTINCT classification))
