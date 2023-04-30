@@ -1,3 +1,5 @@
+-- criação das external tables apontando para os arqivos parquet's
+
 CREATE OR REPLACE EXTERNAL TABLE `neuralmed_raw.Exam`
 WITH PARTITION COLUMNS
 OPTIONS(
