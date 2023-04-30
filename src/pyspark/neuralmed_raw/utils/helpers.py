@@ -7,7 +7,8 @@ from pyspark.sql.types import Row
 
 def parse_json(row: Row, target_columns: List[Any]):
     """
-    todo
+    Função que converte os campos de cada linha do dataset para datatypes corretos, 
+    baseado no arquivo de configuração
     """
 
     parsed_row = []
